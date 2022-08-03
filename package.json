@@ -13,5 +13,14 @@
     "express": "^4.18.1",
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valeruiz99/aprendiendoNodeValeria.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Valeruiz99/aprendiendoNodeValeria/issues"
+  },
+  "homepage": "https://github.com/Valeruiz99/aprendiendoNodeValeria#readme"
 }
