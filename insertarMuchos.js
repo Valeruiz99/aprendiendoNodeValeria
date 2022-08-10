@@ -1,6 +1,6 @@
+//Insertar muchos en la base de datos de mongodb
 const MongoCli = require("mongodb").MongoClient;
 
-// Replace the uri string with your MongoDB deployment's connection string.
 const uri = "mongodb+srv://ValeriaBustamante:w3WhljMYIRa5jadU@clusteradsi2364481.1di43ez.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoCli(uri);

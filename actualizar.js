@@ -1,29 +1,26 @@
-import { MongoClient } from "mongodb";
+//Actualizar en la base de datos de mongodb
+const MongoCli = require("mongodb").MongoClient;
 
-// Replace the uri string with your MongoDB deployment's connection string.
-const uri = "<connection string uri>";
+const uri = "mongodb+srv://ValeriaBustamante:w3WhljMYIRa5jadU@clusteradsi2364481.1di43ez.mongodb.net/?retryWrites=true&w=majority";
 
-const client = new MongoClient(uri);
+const client = new MongoCli(uri);
 
 async function run() {
   try {
-    const database = client.db("sample_mflix");
-    const movies = database.collection("movies");
+    const database = client.db("POSValeriaBustamante");
+    const vendedores = database.collection("Vendedores");
 
-    // create a filter for a movie to update
-    const filter = { title: "Random Harvest" };
+    const filter = { nombre: "Manuel" };
 
-    // this option instructs the method to create a document if no documents match the filter
     const options = { upsert: true };
 
-    // create a document that sets the plot of the movie
     const updateDoc = {
       $set: {
-        plot: `A harvest of random numbers, such as: ${Math.random()}`
+        nombre: `Manuela`
       },
     };
 
-    const result = await movies.updateOne(filter, updateDoc, options);
+    const result = await vendedores.updateOne(filter, updateDoc, options);
     console.log(
       `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
     );
