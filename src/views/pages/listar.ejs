@@ -1,0 +1,11 @@
+<h1>Estudiantes de <%= descripcion  %></h1><!--Aquí estamos trayendo una variable definida en el express.js-->
+
+<ul>
+    <% matriculados.forEach(function(aprendiz){ %>
+        <li>
+            Nombre: <%= aprendiz.nombre %>,
+            Ficha: <%= aprendiz.Ficha %>,
+            Promedio: <%= aprendiz.Promedio %>
+        </li>
+  <% }); %>
+</ul>
